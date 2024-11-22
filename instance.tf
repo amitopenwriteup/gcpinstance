@@ -26,6 +26,7 @@ resource "google_compute_instance" "my_vm" {
 
   metadata = {
     Name = "amit-instance"
+    "ssh-keys" = "ubuntu:${file("/home/amit/gcp/terraform_base/networking/keys/vmkey.pub")}"  
   }
 
   tags = ["amit-instance"]
