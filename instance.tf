@@ -2,6 +2,7 @@ data "terraform_remote_state" "network_details" {
   backend = "gcs"
 
   config = {
+    credentials = "location of json file"
     bucket = "provide your bucket name"           # GCS bucket name
     prefix = "student.01-network-state"  # Path to the remote state file
   }
