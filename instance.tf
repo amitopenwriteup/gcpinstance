@@ -2,7 +2,7 @@ data "terraform_remote_state" "network_details" {
   backend = "gcs"
 
   config = {
-    bucket = "terraformgcpow23"           # GCS bucket name
+    bucket = "provide your bucket name"           # GCS bucket name
     prefix = "student.01-network-state"  # Path to the remote state file
   }
 }
