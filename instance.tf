@@ -2,7 +2,6 @@ data "terraform_remote_state" "network_details" {
   backend = "gcs"
 
   config = {
-    credentials = "location of json file"
     bucket = "provide your bucket name"           # GCS bucket name
     prefix = "student.01-network-state"  # Path to the remote state file
   }
@@ -11,7 +10,7 @@ data "terraform_remote_state" "network_details" {
 resource "google_compute_instance" "my_vm" {
   name         = "amit-instance"
   machine_type = "e2-micro"
-  zone         = "asia-south1-a"
+  zone         = "us-east1-b"
 
   boot_disk {
     initialize_params {
